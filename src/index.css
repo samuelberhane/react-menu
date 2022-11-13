@@ -1,0 +1,156 @@
+:root {
+  --body-color: #f1f0ee;
+  --footer-color: #234321;
+  --btn-color: #23a42a;
+  --btn-hover: #bd34b4;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--body-color);
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  padding: 0.8rem 6rem;
+}
+
+.title {
+  text-align: center;
+  margin: 0.7rem;
+}
+
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  gap: 1rem;
+}
+
+.menu {
+  padding: 0 0.6rem;
+}
+
+.item {
+  padding: 1rem 8px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 150px;
+}
+
+.menu-head {
+  margin-bottom: 5px;
+  padding-bottom: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px dotted rgb(216, 71, 221);
+}
+
+.img-container {
+  width: 220px;
+  height: 90px;
+}
+
+.menu-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu-desc {
+  padding: 0 5px;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 0.7rem;
+}
+
+.btn {
+  background-color: var(--btn-color);
+  color: #fff;
+  border: none;
+  padding: 0.35rem 1.1rem;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--btn-hover);
+  transform: scale(1.1);
+}
+
+footer {
+  text-align: center;
+  margin-top: 10px;
+  background-color: var(--footer-color);
+  color: #fff;
+  padding: 0.6rem 0;
+}
+
+@media (max-width: 991px) {
+  .menu-items {
+    grid-template-columns: repeat(1, 100%);
+  }
+}
+
+@media (max-width: 667px) {
+  .menu-items {
+    grid-template-columns: repeat(1, 100%);
+  }
+  .container {
+    padding: 0.5rem 0.6rem;
+  }
+
+  .title {
+    margin: 0.5rem;
+  }
+
+  .menu {
+    padding: 0 5px;
+  }
+
+  .item {
+    padding: 1rem 6px;
+    gap: 0.2rem;
+    height: 170px;
+  }
+
+  .menu-head {
+    margin-bottom: 7px;
+  }
+
+  .img-container {
+    width: 300px;
+    height: 100px;
+  }
+
+  .menu-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .menu-desc {
+    padding: 0 5px;
+  }
+}
